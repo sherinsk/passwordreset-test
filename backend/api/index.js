@@ -9,10 +9,6 @@ const prisma = new PrismaClient(); // Initialize Prisma Client
 
 const app=express()
 
-app.use(cors({
-    origin: 'https://passwordreset-test-i8ae.vercel.app'
-  }))
-
 app.use(express.json())
 
 var emailwithOTP=[]
@@ -27,6 +23,10 @@ const transporter = nodemailer.createTransport({
       pass: "ruin cfhp nfox dmrd",
     },
   });
+
+app.use(cors({
+    origin: 'https://passwordreset-test-i8ae.vercel.app'
+  }))
 
 app.post('/signup',async (req,res)=>
 {
