@@ -11,7 +11,7 @@ const SignupForm = () => {
     e.preventDefault();
     const body = { firstName, lastName, email, password };
     try {
-      const response = await axios.post('http://localhost:8080/signup', body);
+      const response = await axios.post('https://passwordreset-test.vercel.app/signup', body);
       // Handle success
       console.log('Signup successful:', response.data);
       // Optionally, display a success message to the user or redirect them to another page
