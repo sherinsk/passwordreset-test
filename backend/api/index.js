@@ -10,7 +10,7 @@ const prisma = new PrismaClient(); // Initialize Prisma Client
 const app=express()
 
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: 'https://passwordreset-test-i8ae.vercel.app'
   }))
 
 app.use(express.json())
