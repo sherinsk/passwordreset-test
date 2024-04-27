@@ -11,10 +11,6 @@ const app=express()
 
 app.use(express.json())
 
-app.use(cors({
-    origin: 'https://passwordreset-test-i8ae.vercel.app'
-}));
-
 var emailwithOTP=[]
 
 const transporter = nodemailer.createTransport({
@@ -27,6 +23,10 @@ const transporter = nodemailer.createTransport({
       pass: "ruin cfhp nfox dmrd",
     },
   });
+app.use(cors({
+  origin: 'https://passwordreset-test-i8ae.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}))
 
 app.post('/signup',async (req,res)=>
 {
