@@ -10,7 +10,7 @@ const ForgotPasswordForm = () => {
     {
     e.preventDefault();
     const body={email}
-    const response = await axios.post('https://passwordreset-test.vercel.app/forgot-password', body);
+    const response = await axios.post('https://passwordreset-test-sn8l.vercel.app', body);
     if(response.data.message==="success")
     {
         setEmailSent(true)
