@@ -19,8 +19,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-      user: "sherin.backend.dev@gmail.com",
-      pass: "ruin cfhp nfox dmrd",
+      user: "sherinsk007@gmail.com",
+      pass: "wgtx oxsu vrbc oohw",
     },
   });
 app.use(cors({
@@ -69,7 +69,7 @@ app.post('/forgot-password', async (req,res)=>
         if(data)
         {
             var mailOptions = {
-                from: 'sherin.backend.dev@gmail.com',
+                from: 'sherinsk007@gmail.com',
                 to: email,
                 subject: 'Sending Email using Node.js',
                 html: htmlContent
