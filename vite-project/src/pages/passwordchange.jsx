@@ -20,7 +20,7 @@ const PasswordChangePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post('https://passwordreset-test.vercel.app/verify', body);
+        const response = await axios.post('https://passwordreset-test-sn8l.vercel.app/verify', body);
         if (response.data.message === "success") {
           setPage(true);
         } else {
@@ -47,7 +47,7 @@ const PasswordChangePage = () => {
     }
     else
     {
-       const response2=await axios.patch('https://passwordreset-test.vercel.app/passwordupdate', body2);
+       const response2=await axios.patch('https://passwordreset-test-sn8l.vercel.app/passwordupdate', body2);
        if(response2.status===200)
        {
         setPassword('');
